@@ -21,7 +21,7 @@ def handler():
     sentences = request.json
 
     #Tokenize sentences
-    encoded_input = tokenizer(sentences, padding=True, truncation=True, max_length=128, return_tensors='pt')
+    encoded_input = tokenizer(sentences, padding=True, truncation=True, max_length=256, return_tensors='pt')
 
     #Compute token embeddings
     with torch.no_grad():
